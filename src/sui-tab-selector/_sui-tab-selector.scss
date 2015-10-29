@@ -1,0 +1,19 @@
+@import './settings.scss';
+
+.sui-TabSelector {
+  display: inline-block;
+  list-style: none;
+  margin-right: 1em;
+}
+
+.sui-TabSelector-link {
+  color: $text;
+  cursor: pointer;
+  padding: 5px 10px;
+  text-decoration: none;
+
+  &--active {
+    background: $background;
+    color: $text-light;
+  }
+}

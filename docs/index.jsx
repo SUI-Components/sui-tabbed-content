@@ -11,7 +11,7 @@ class SampleComponent extends React.Component {
 }
 
 SampleComponent.propTypes = {
-  content: ''
+  content: React.PropTypes.string
 };
 
 const blocks = [{

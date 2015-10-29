@@ -1,21 +1,42 @@
 import React from 'react';
 import _ from 'lodash';
+import Tab from '../sui-tab';
+import TabSelector from '../sui-tab-selector';
 
 export default class TabbedContent extends React.Component {
+
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      items: this.props.blocks.map((item) => {
+                item.id = _.camelCase(item.title);
+                return item;
+              })
+    };
+  }
+
+  handleSelect(tab) {
+    this.setState({
+      items: this.state.items.map((item) => {
+               item.selected = tab.target.hash === `#${item.id}`;
+               return item;
+             })
+    });
+  }
+
   render() {
     const tabs = this.props.blocks.map((item, index) => {
       return (
-        <li className={item.selected && 'sui-tabbedContent'} key={index}>
-          <a href={`#${_.camelCase(item.title)}`}>{item.title}</a>
-        </li>
+        <TabSelector id={item.id} title={item.title} key={index} active={item.selected} onSelect={this.handleSelect.bind(this)} />
         );
     });
 
     const sections = this.props.blocks.map((item, index) => {
       return (
-        <section id={`#${_.camelCase(item.title)}`} key={index}>
+        <Tab id={item.id} key={index} active={item.selected}>
           {item.component}
-        </section>
+        </Tab>
       );
     });
 
