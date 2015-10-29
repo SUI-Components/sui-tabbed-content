@@ -1,7 +1,7 @@
 # sui-tabbed-content
 
 ## Description
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam commodi esse quis ipsam a iusto aut ratione ex optio ut! Illum alias voluptatibus dolores, perferendis deserunt totam illo reiciendis voluptatem.
+A component for displaying content inside tabs.
 
 ## Instalation
 Clone this repository and run:

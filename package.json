@@ -1,5 +1,5 @@
 {
-  "name": "sui-tabbed-content",
+  "name": "@schibstedspain/sui-tabbed-content",
   "version": "0.0.1",
   "main": "dist/",
   "scripts": {
