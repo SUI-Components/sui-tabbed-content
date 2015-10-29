@@ -6,8 +6,12 @@ import '../src/index.scss';
 
 class SampleComponent extends React.Component {
   render() {
-    return (<p>{this.props.content}</p>)
+    return (<p>{this.props.content}</p>);
   }
+}
+
+SampleComponent.propTypes = {
+  content: ''
 };
 
 const blocks = [{
