@@ -3,13 +3,13 @@ $color: #cccccc;
 .sui-TabbedContent {
   background-color: $color;
 
-  & > ul > li{
+  li {
+    float: left;
     list-style: none;
     margin-right: 1em;
-    float:left;
   }
 
-  &--selected{
-    background-color:$color;
+  &--selected {
+    background-color: $color;
   }
 }
