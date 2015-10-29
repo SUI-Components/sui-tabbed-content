@@ -1,0 +1,15 @@
+$color: #cccccc;
+
+.sui-TabbedContent {
+  background-color: $color;
+
+  & > ul > li{
+    list-style: none;
+    margin-right: 1em;
+    float:left;
+  }
+
+  &--selected{
+    background-color:$color;
+  }
+}
