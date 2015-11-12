@@ -16,11 +16,11 @@ export default class TabbedContent extends React.Component {
     };
   }
 
-  handleSelect(tab) {
-    tab.preventDefault();
+  handleSelect(evt) {
+    evt.preventDefault();
     this.setState({
       items: this.state.items.map((item) => {
-               item.selected = tab.target.hash === `#${item.id}`;
+               item.selected = evt.target.hash === `#${item.id}`;
                return item;
              })
     });
