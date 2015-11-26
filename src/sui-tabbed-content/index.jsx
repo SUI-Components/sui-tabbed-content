@@ -10,8 +10,10 @@ export default class TabbedContent extends React.Component {
 
     this.state = {
       items: this.props.blocks.map((item) => {
-                item.id = _.camelCase(item.title);
-                return item;
+                return {
+                  id: _.camelCase(item.title),
+                  title: item.title
+                };
               })
     };
   }
@@ -27,13 +29,13 @@ export default class TabbedContent extends React.Component {
   }
 
   render() {
-    const tabs = this.props.blocks.map((item, index) => {
+    const tabs = this.state.items.map((item, index) => {
       return (
         <TabSelector id={item.id} title={item.title} key={index} active={item.selected} onSelect={this.handleSelect.bind(this)} />
         );
     });
 
-    const sections = this.props.blocks.map((item, index) => {
+    const sections = this.state.items.map((item, index) => {
       return (
         <Tab id={item.id} key={index} active={item.selected}>
           {item.component}
