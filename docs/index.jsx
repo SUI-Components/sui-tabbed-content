@@ -15,13 +15,16 @@ SampleComponent.propTypes = {
 };
 
 const blocks = [{
+  id: '#first',
   title: 'First component',
   selected: true,
   component: <SampleComponent content={'First Component'} />
 }, {
+  id: '#second',
   title: 'Second component',
   component: <SampleComponent content={'Second Component'} />
 }, {
+  id: '#third',
   title: 'Third component',
   component: <SampleComponent content={'Third Component'} />
 }];
