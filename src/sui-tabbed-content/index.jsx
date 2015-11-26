@@ -11,8 +11,8 @@ export default class TabbedContent extends React.Component {
     this.state = {
       items: this.props.blocks.map((item) => {
                 return {
-                  id: _.camelCase(item.title),
-                  title: item.title
+                  ...item,
+                  id: _.camelCase(item.title)
                 };
               })
     };
@@ -22,8 +22,10 @@ export default class TabbedContent extends React.Component {
     evt.preventDefault();
     this.setState({
       items: this.state.items.map((item) => {
-               item.selected = evt.target.hash === `#${item.id}`;
-               return item;
+                return {
+                  ...item,
+                  selected: evt.target.hash === `#${item.id}`
+                };
              })
     });
   }
