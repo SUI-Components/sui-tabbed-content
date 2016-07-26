@@ -1,6 +1,6 @@
 {
   "name": "@schibstedspain/sui-tabbed-content",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "main": "dist/",
   "scripts": {
     "clean:dist": "rm -Rf ./dist/*",
