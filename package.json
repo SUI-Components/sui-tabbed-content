@@ -1,6 +1,6 @@
 {
   "name": "@schibstedspain/sui-tabbed-content",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "main": "dist/",
   "scripts": {
     "clean:dist": "rm -Rf ./dist/*",
@@ -33,7 +33,7 @@
     "react": "0.14"
   },
   "dependencies": {
-    "@schibstedspain/theme-basic": "5.9",
+    "@schibstedspain/theme-basic": "5",
     "classnames": "2.2.0"
   },
   "devDependencies": {
