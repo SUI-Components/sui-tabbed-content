@@ -34,7 +34,7 @@
   },
   "dependencies": {
     "@schibstedspain/theme-basic": "5",
-    "classnames": "2.2.0"
+    "classnames": "2.2.5"
   },
   "devDependencies": {
     "@schibstedspain/frontend-pre-commit-rules": "6.7",
